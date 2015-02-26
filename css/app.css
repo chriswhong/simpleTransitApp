@@ -36,7 +36,6 @@
 }
 
 .homeText {
-  color: #BBDEFB;
   width: 300px;
   margin: 0 auto;
   position: absolute;
@@ -79,8 +78,16 @@
   height: 78px;
 }
 
+.homeWrapper {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 body {
   font-family: 'roboto', sans-serif;
+  color: #BBDEFB;
 }
 
 .splashScreen {
@@ -89,6 +96,7 @@ body {
   width: 100%;
   background: #2093F0;
   z-index: 15;
+  text-align:center;
 }
 
 .splashTitle {
@@ -101,3 +109,7 @@ body {
 .splashSub {
   font-size: 24px;
 }
+
+
+
+

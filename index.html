@@ -15,30 +15,80 @@
     <script src="js/script.js"></script>
   </head>
   <body>
-<!--     <header class="bar bar-nav">
-      <a class="icon icon-refresh pull-right"></a>
-      <h1 class="title">Mailboxes</h1>
-    </header> -->
+  <header class="bar bar-nav">
+   
+    </header> 
 
-    <!-- <div class="bar bar-footer">
-      
-      <small class="updated-text">Where can I find my stop number?</small>
-    </div> -->
 
-    <div class="content home">
-
-      <div class='splashScreen'>
+    <div class='splashScreen'>
         <div class='splashTitle'>MTA</div>
         <div class='splashSub'>BUS STOP LOOKUP</div>
       </div>
 
+    <div class="content home">
+
+      
+      <div class='homeWrapper'>
       <div class='homeTop'>
         <div class='homeText'>Enter <span style="color:#fff">Stop Number</span> to find next available bus.</div>
       </div>
-      <input type="text" name="stopID">
-      <div class='homeBottom'>Test</div>
+      
+        <input type="text" name="stopID" id="stopInput">
+      
+      <div class='homeBottom'>
+      <ul class="table-view">
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-pages pull-left"></span>
+            <div class="media-body">
+              All inboxes
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-person pull-left"></span>
+            <div class="media-body">
+              Personal email
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-star-filled pull-left"></span>
+            <div class="media-body">
+              Starred
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-trash pull-left"></span>
+            <div class="media-body">
+              Trash
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-star-filled pull-left"></span>
+            <div class="media-body">
+              Starred
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="inbox.html" data-transition="slide-in">
+            <span class="media-object icon icon-star-filled pull-left"></span>
+            <div class="media-body">
+              Starred
+            </div>
+          </a>
+        </li>
+      </ul>
+      </div>
       <div class='homeFooter'>Where can I find my stop number?</div>
-
+      </div> <!-- homeWrapper -->
     </div>
 
     <!-- Compose modal -->
