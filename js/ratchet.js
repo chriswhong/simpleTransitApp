@@ -247,7 +247,10 @@
   // ==========================================
 
   var touchend = function (e) {
+
     var target = getTarget(e);
+
+    console.log(target);
 
     if (!target) {
       return;
@@ -615,7 +618,8 @@
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
-  window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
+  //window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
+  window.addEventListener('click', touchend);
   window.addEventListener('popstate', popstate);
   window.PUSH = PUSH;
 
@@ -796,6 +800,7 @@
   };
 
   var onTouchEnd = function (e) {
+    console.log('onTouchEnd');
     if (!slider || isScrolling) {
       return;
     }
@@ -911,6 +916,7 @@
   });
 
   window.addEventListener('touchend', function (e) {
+    console.log(e);
     if (!toggle) {
       return;
     }

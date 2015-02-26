@@ -28,11 +28,12 @@
 }
 
 .homeBottom {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background: #1E8AE7;
   padding-top: 150px;
   box-sizing: border-box;
+  overflow-y: scroll; 
 }
 
 .homeText {
@@ -53,7 +54,8 @@
   margin: 0 auto;
   width: 100%;
   font-size: 15px;
-  margin-bottom: 16px;
+  padding: 7px 0 7px 0;
+  background: #1E8AE7;
 }
 
 .home {

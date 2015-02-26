@@ -22,8 +22,16 @@ $( document ).ready(function() {
 
       console.log(data);
 
+      //PUSH triggers the loading of new pages in ratchet.  
+      //Normally called with a touch event, we call it manually here
+      PUSH({
+        url        : 'inbox.html',
+        transition : 'slide-in'
+      });
+
+
       if (data.stop_times.length>0) {
-        
+
       }
 
       // $('#stopId').text(stop_id);
