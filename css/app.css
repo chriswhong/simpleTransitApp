@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(Roboto-Regular.ttf);
+}
+
+
+.updated-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.table-view-cell .icon {
+  color: #007aff;
+}
+
+.homeTop {
+  height: 150px;
+  width: 100%;
+  background: #1976D2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.homeBottom {
+  min-height: 100vh;
+  width: 100%;
+  background: #1E8AE7;
+  padding-top: 150px;
+  box-sizing: border-box;
+}
+
+.homeText {
+  color: #BBDEFB;
+  width: 300px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: 24px;
+  text-align: left;
+  line-height: 32px;
+  margin-top: 35px;
+}
+
+.homeFooter {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.home {
+  text-align: center;
+  color: #BBDEFB;
+}
+
+.home input {
+  position: absolute;
+  top: 112px;
+  width: 300px;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  font-size: 36px;
+  color: #fff;
+  height: 78px;
+}
+
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+.splashScreen {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: #2093F0;
+  z-index: 15;
+}
+
+.splashTitle {
+  margin-top: 232px;
+  color: #fff;
+  font-size: 77px;
+  height: 56px;
+}
+
+.splashSub {
+  font-size: 24px;
+}
