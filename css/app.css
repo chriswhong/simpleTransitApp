@@ -112,6 +112,34 @@ body {
   font-size: 24px;
 }
 
+.bar-nav {
+  background-color: #1976D2;
+  height: 76px;
+  padding-top: 16px;
+}
 
+.stopSmall {
+  font-size:14px;
+}
 
+.stopLarge {
+  color:#fff;
+  font-size:20px;
+}
 
+.bar .icon {
+  padding-right: 16px;
+  color: #000;
+}
+
+#map {
+  height: 350px;
+  width: 100%;
+  position: fixed;
+  top: 76px;
+  z-index: 20;
+}
+
+.bar-nav~.content {
+  padding-top: 429px;
+}

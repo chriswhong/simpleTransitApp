@@ -20,14 +20,13 @@ $( document ).ready(function() {
 
     $.getJSON('http://mtabustrack.herokuapp.com/stoptimes/' + reqStopNumber, function(data){
 
-      console.log(data);
 
       //PUSH triggers the loading of new pages in ratchet.  
       //Normally called with a touch event, we call it manually here
       PUSH({
         url        : 'inbox.html',
         transition : 'slide-in'
-      });
+      },updateData);
 
 
       if (data.stop_times.length>0) {
@@ -45,8 +44,47 @@ $( document ).ready(function() {
       //   $('#arrivalList').append(appendString);
       //   $('.results').show();
       // });
+      function updateData() {
+        console.log(data);
+        //update Header
+        $('.stopNumber').text(data.stop_id);
+        $('.stopName').text(data.stop_name);
+
+        //initialize the leaflet map, set options, view, and basemap
+        var map = L.map('map', {
+            zoomControl: false,
+            scrollWheelZoom: false
+          })
+          .setView([39.2833, -76.6167], 12);
+
+        L.tileLayer(
+          'http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y={y}&z={z}', {
+            minZoom: 0,
+            maxZoom: 19,
+            attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(map);
+
+
+        data.stop_times.forEach(function(stop_time) {
+          console.log('hello');
+
+          var s = '<li class=\"table-view-cell\">';
+          s += "<p>" + stop_time.route_number + " - " + stop_time.route_name + " " + stop_time.direction_name + '</p>';
+          s += "<p>" + stop_time.stop_time + "</p>";
+          s += '</li>'
+
+          $('.table-view').append(s);
+
+        });
+
+
+      }
     });
+
+    
   }
+
+  
       
 
 });

@@ -345,7 +345,7 @@
   // Core PUSH functionality
   // =======================
 
-  var PUSH = function (options) {
+  var PUSH = function (options,cb) {
     var key;
     var xhr = PUSH.xhr;
 
@@ -371,7 +371,7 @@
         clearTimeout(options._timeout);
       }
       if (xhr.readyState === 4) {
-        xhr.status === 200 ? success(xhr, options) : failure(options.url);
+        xhr.status === 200 ? success(xhr, options, cb) : failure(options.url);
       }
     };
 
@@ -394,13 +394,15 @@
     if (xhr.readyState && !options.ignorePush) {
       cachePush();
     }
+
+    
   };
 
 
   // Main XHR handlers
   // =================
 
-  var success = function (xhr, options) {
+  var success = function (xhr, options, cb) {
     var key;
     var barElement;
     var data = parseXHR(xhr, options);
@@ -435,6 +437,7 @@
         transition : options.transition
       }, options.id);
       triggerStateChange();
+      cb();
     });
 
     if (!options.ignorePush && window._gaq) {
